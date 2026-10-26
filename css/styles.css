@@ -1,0 +1,134 @@
+/* Pretendard & Inter Typography + Square UI Minimal Design Tokens */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+
+:root {
+  --font-sans: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f8fafc;
+  color: #09090b;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle custom scrollbars for internal panes */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e4e4e7;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d4d4d8;
+}
+
+/* Square UI Card & Border Refinements */
+.sq-card {
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 10px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.sq-card:hover {
+  border-color: #d4d4d8;
+  box-shadow: 0 2px 8px -2px rgba(9, 9, 11, 0.05);
+}
+
+.sq-input {
+  border: 1px solid #e4e4e7;
+  border-radius: 7px;
+  background: #ffffff;
+  font-size: 13px;
+  color: #18181b;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.sq-input:focus {
+  outline: none;
+  border-color: #18181b;
+  box-shadow: 0 0 0 2px rgba(24, 24, 27, 0.06);
+}
+
+/* Sidebar navigation active item */
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 10px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #52525b;
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+.nav-item:hover {
+  background-color: #f4f4f5;
+  color: #18181b;
+}
+
+.nav-item.active {
+  background-color: #18181b;
+  color: #ffffff;
+}
+
+.nav-item.active .nav-badge {
+  background-color: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+/* Tag chip styling */
+.tag-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 7px;
+  border-radius: 5px;
+  font-size: 11.5px;
+  font-weight: 500;
+  background-color: #f4f4f5;
+  color: #3f3f46;
+  border: 1px solid #e4e4e7;
+  white-space: nowrap;
+}
+
+.tag-chip.selectable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.tag-chip.selectable:hover {
+  border-color: #a1a1aa;
+}
+
+.tag-chip.selected {
+  background-color: #18181b;
+  color: #ffffff;
+  border-color: #18181b;
+}
+
+/* Graph Canvas Container */
+#graph-canvas-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#e4e4e7 1px, transparent 1px);
+  background-size: 20px 20px;
+}
